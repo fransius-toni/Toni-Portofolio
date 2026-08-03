@@ -1,0 +1,233 @@
+/* ─── Google Fonts ──────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── Tailwind directives ───────────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-navy-950 text-text-primary font-sans antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent-cyan rounded-full;
+    opacity: 0.6;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-sky;
+  }
+
+  /* Focus outline */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.cyan');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* ─── Components ────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Section wrapper */
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-cyan to-accent-blue bg-clip-text text-transparent;
+  }
+
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-accent-sky to-accent-teal bg-clip-text text-transparent;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-navy-800 border border-navy-600/40 rounded-2xl shadow-card;
+    background: linear-gradient(135deg, rgba(7,20,40,0.9) 0%, rgba(4,15,30,0.95) 100%);
+  }
+
+  .card-hover {
+    @apply card transition-all duration-300 hover:border-accent-cyan/30 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  /* Accent border left */
+  .border-l-accent {
+    border-left: 3px solid theme('colors.accent.cyan');
+  }
+
+  /* Section divider glow */
+  .divider-glow {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, theme('colors.accent.cyan'), transparent);
+    opacity: 0.3;
+  }
+
+  /* Tag / badge */
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-navy-700 border border-navy-500/50 text-text-secondary
+           transition-colors duration-200 hover:border-accent-cyan/40 hover:text-accent-light;
+  }
+
+  /* Navigation link */
+  .nav-link {
+    @apply text-sm font-medium text-text-secondary hover:text-accent-cyan
+           transition-colors duration-200 relative py-1;
+  }
+
+  .nav-link.active {
+    @apply text-accent-cyan;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-accent-cyan transition-all duration-300 rounded-full;
+  }
+
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold
+           bg-gradient-to-r from-accent-cyan to-accent-blue text-white
+           shadow-glow-cyan transition-all duration-300
+           hover:shadow-glow-blue hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold
+           border border-accent-cyan/50 text-accent-cyan bg-transparent
+           transition-all duration-300
+           hover:bg-accent-cyan/10 hover:border-accent-cyan hover:scale-105 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+           text-text-secondary border border-navy-600/60
+           transition-all duration-300
+           hover:text-text-primary hover:border-navy-500 hover:bg-navy-700/50 active:scale-95;
+  }
+
+  /* Section heading */
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl font-bold text-text-primary;
+  }
+
+  .section-subtitle {
+    @apply text-text-secondary text-base leading-relaxed;
+  }
+
+  /* Timeline line */
+  .timeline-line {
+    @apply absolute left-4 top-10 bottom-0 w-px bg-gradient-to-b from-accent-cyan/40 to-transparent;
+  }
+
+  /* Input */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl bg-navy-700 border border-navy-600/60 text-text-primary
+           placeholder-text-muted text-sm
+           focus:outline-none focus:border-accent-cyan/60 focus:ring-1 focus:ring-accent-cyan/30
+           transition-colors duration-200;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Noise texture overlay for depth */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
+  /* Glow dot */
+  .dot-glow {
+    @apply w-1.5 h-1.5 rounded-full bg-accent-cyan shadow-glow-cyan;
+  }
+
+  /* Scroll snap */
+  .snap-y-mandatory {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-start {
+    scroll-snap-align: start;
+  }
+
+  /* Backdrop blur utility */
+  .glass {
+    @apply backdrop-blur-md bg-navy-800/70 border border-navy-600/40;
+  }
+
+  .glass-light {
+    @apply backdrop-blur-sm bg-navy-800/40 border border-navy-600/20;
+  }
+}
+
+
+/* ─── Reduced-motion ────────────────────────────────────────────────────────── */
+/*
+  Respect the user's operating-system preference for reduced motion.
+  When prefers-reduced-motion: reduce is set:
+    - All CSS animations are paused.
+    - All CSS transitions are instantaneous.
+  Framer Motion also reads this preference via its own hook; passing
+  `viewport={{ once: true }}` on all whileInView animations ensures they
+  only fire once and don't loop.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── Mobile performance ────────────────────────────────────────────────────── */
+/*
+  On small screens hide the floating particle dots — they add no information
+  and consume paint budget on lower-powered devices.
+  The ambient gradient blobs are kept (cheap blur layers, not individual elements).
+*/
+@media (max-width: 640px) {
+  /* Hide individual particle span elements rendered by ParticlesBackground */
+  [aria-hidden="true"] span.rounded-full.bg-accent-cyan {
+    display: none;
+  }
+}
