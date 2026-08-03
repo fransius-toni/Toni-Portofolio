@@ -117,6 +117,23 @@ const portfolioData: PortfolioData = {
     },
   ],
 
+  // ── Project Technology Usage ───────────────────────────────────────────────
+  // Counts how many featured projects use each technology.
+  // Used by the Project Insights horizontal bar chart.
+  // Values are factual counts — not skill ratings or proficiency percentages.
+  projectTechnologyUsage: [
+    { technology: 'Python',                projects: 2 },
+    { technology: 'Machine Learning',      projects: 2 },
+    { technology: 'Streamlit',             projects: 2 },
+    { technology: 'Groq API',              projects: 2 },
+    { technology: 'PostgreSQL',            projects: 1 },
+    { technology: 'XGBoost',               projects: 1 },
+    { technology: 'Random Forest',         projects: 1 },
+    { technology: 'Gemini AI',             projects: 1 },
+    { technology: 'Prompt Engineering',    projects: 1 },
+    { technology: 'Interactive Storytelling', projects: 1 },
+  ],
+
   // ── Projects ───────────────────────────────────────────────────────────────
   projects: [
     {

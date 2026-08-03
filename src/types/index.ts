@@ -91,6 +91,12 @@ export interface PersonalInfo {
   avatar?: string;
 }
 
+export interface TechUsage {
+  technology: string;
+  /** Number of featured projects that use this technology */
+  projects: number;
+}
+
 export interface PortfolioData {
   personal: PersonalInfo;
   about: {
@@ -98,6 +104,8 @@ export interface PortfolioData {
     stats: { label: string; value: string }[];
   };
   skillCategories: SkillCategory[];
+  /** Technology-usage data for the Project Insights chart */
+  projectTechnologyUsage: TechUsage[];
   projects: Project[];
   experiences: Experience[];
   education: Education;
