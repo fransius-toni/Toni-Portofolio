@@ -66,16 +66,17 @@ function CertificateCard({ cert, index }: CertificateCardProps) {
             <p className="text-xs text-text-muted mt-0.5">{cert.issuer} · {cert.year}</p>
           </div>
         </div>
+        {/* Button is hidden when credential is empty or undefined */}
         {cert.credential && (
           <a
             href={cert.credential}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-accent-cyan hover:text-accent-light transition-colors"
-            aria-label={`View ${cert.title} credential (opens in new tab)`}
+            aria-label={`View ${cert.title} certificate (opens in new tab)`}
           >
             <ExternalLink size={11} aria-hidden="true" />
-            View Credential
+            View Certificate
           </a>
         )}
       </div>

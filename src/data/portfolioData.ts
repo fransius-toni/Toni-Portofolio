@@ -279,8 +279,15 @@ const portfolioData: PortfolioData = {
   //   image: '/images/certificates/aws-cloud.png',
   // },
   certificates: [
-    // ← Add real certificate objects here
-  ],
+  {
+    id: 'bnsp-junior-web-developer-2025',
+    title: 'Junior Web Developer',
+    issuer: 'LSP BPPTIK / BNSP',
+    year: '2025',
+    credential: '/certificates/junior-web-developer.pdf',
+    image: '/images/certificates/junior-web-developer.jpg',
+  },
+],
 };
 
 export default portfolioData;
