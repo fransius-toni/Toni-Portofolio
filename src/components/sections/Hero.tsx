@@ -30,26 +30,26 @@ function DataVisual() {
         EcoRoute AI — Dashboard
       </text>
 
-      {/* Stat cards — no unverified accuracy percentages */}
+      {/* Stat cards — descriptive labels, no unverified operational numbers */}
       <rect x="24" y="66" width="80" height="50" rx="8"
         fill="rgba(6,182,212,0.08)" stroke="rgba(6,182,212,0.2)" strokeWidth="1"/>
-      <text x="34" y="84" fill="rgba(6,182,212,0.7)" fontSize="8" fontFamily="monospace">WASTE VOL</text>
-      <text x="34" y="101" fill="#f0f4ff" fontSize="16" fontWeight="bold" fontFamily="monospace">3.2T</text>
+      <text x="34" y="83" fill="rgba(6,182,212,0.7)" fontSize="7" fontFamily="monospace">WASTE PREDICT.</text>
+      <text x="34" y="99" fill="rgba(103,232,249,0.95)" fontSize="11" fontWeight="bold" fontFamily="monospace">Enabled</text>
 
       <rect x="114" y="66" width="80" height="50" rx="8"
         fill="rgba(37,99,235,0.08)" stroke="rgba(37,99,235,0.2)" strokeWidth="1"/>
-      <text x="124" y="84" fill="rgba(37,99,235,0.8)" fontSize="8" fontFamily="monospace">TRUCKS</text>
-      <text x="124" y="101" fill="#f0f4ff" fontSize="16" fontWeight="bold" fontFamily="monospace">12</text>
+      <text x="124" y="83" fill="rgba(37,99,235,0.8)" fontSize="7" fontFamily="monospace">FLEET PLANNING</text>
+      <text x="124" y="99" fill="rgba(147,197,253,0.95)" fontSize="11" fontWeight="bold" fontFamily="monospace">Integrated</text>
 
       <rect x="204" y="66" width="80" height="50" rx="8"
         fill="rgba(13,148,136,0.08)" stroke="rgba(13,148,136,0.2)" strokeWidth="1"/>
-      <text x="214" y="84" fill="rgba(13,148,136,0.8)" fontSize="8" fontFamily="monospace">ML MODEL</text>
-      <text x="214" y="101" fill="#f0f4ff" fontSize="13" fontWeight="bold" fontFamily="monospace">Ensemble</text>
+      <text x="214" y="83" fill="rgba(13,148,136,0.8)" fontSize="7" fontFamily="monospace">ML MODEL</text>
+      <text x="214" y="99" fill="rgba(94,234,212,0.95)" fontSize="11" fontWeight="bold" fontFamily="monospace">Ensemble</text>
 
       <rect x="294" y="66" width="80" height="50" rx="8"
         fill="rgba(14,165,233,0.08)" stroke="rgba(14,165,233,0.2)" strokeWidth="1"/>
-      <text x="304" y="84" fill="rgba(14,165,233,0.8)" fontSize="8" fontFamily="monospace">ROUTES</text>
-      <text x="304" y="101" fill="#f0f4ff" fontSize="16" fontWeight="bold" fontFamily="monospace">8</text>
+      <text x="304" y="83" fill="rgba(14,165,233,0.8)" fontSize="7" fontFamily="monospace">ROUTING</text>
+      <text x="304" y="99" fill="rgba(186,230,253,0.95)" fontSize="11" fontWeight="bold" fontFamily="monospace">Ready</text>
 
       {/* Bar chart */}
       <rect x="24" y="130" width="210" height="130" rx="8"
