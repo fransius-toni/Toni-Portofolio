@@ -159,26 +159,35 @@ const portfolioData: PortfolioData = {
     {
       id:       'dvd-rental-analytics',
       title:    'Intelligent DVD Rental Analytics Dashboard',
-      subtitle: 'Full-Stack Data Analytics & AI Application',
+      subtitle: 'Full-Stack Data Analytics and AI Application',
       description:
-        'A PostgreSQL and Streamlit analytics dashboard that transforms rental transaction data into actionable business insights. It includes a machine learning demand-prediction model and a Llama 3.1 AI assistant through Groq API for natural-language business analytics.',
+        'A PostgreSQL and Streamlit analytics dashboard that transforms DVD rental and movie inventory data into actionable business insights. The system includes inventory analysis, revenue analysis, actor performance analysis, machine learning prediction, and a local AI assistant for natural-language interaction.',
       contribution:
-        'Data pipeline development, database integration, analytics dashboard, prediction model integration, and AI assistant development.',
+        'Data pipeline development, PostgreSQL integration, analytics dashboard development, prediction model integration, and AI assistant integration.',
       technologies: [
         'Python',
         'PostgreSQL',
         'Streamlit',
         'Machine Learning',
+        'Data Analytics',
         'Groq API',
         'Llama 3.1',
       ],
       notes: [],
       images: [
-        { src: '/images/projects/dvd-dashboard.png', alt: 'DVD Rental Analytics — Dashboard Overview' },
+        {
+          src: '/images/projects/dvd-dashboard.jpeg',
+          alt: 'Movie Inventory Dashboard with Local AI Assistant',
+        },
+        {
+          src: '/images/projects/dvd-actor-analysis.jpeg',
+          alt: 'Actor Star Power Analysis Dashboard',
+        },
       ],
-      github:   'https://github.com/fransius-toni',  // TODO: update to repo URL
-      demo:     '',
-      featured: true,
+      github:      'https://github.com/adrianmardiat28-pixel/GenAI',
+      demo:        '',
+      featured:    true,
+      teamProject: true,
     },
     {
       id:       'amelia-ai-film',
