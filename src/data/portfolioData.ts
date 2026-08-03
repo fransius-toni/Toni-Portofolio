@@ -183,24 +183,34 @@ const portfolioData: PortfolioData = {
     {
       id:       'amelia-ai-film',
       title:    'Amelia Interactive AI Short Film',
-      subtitle: 'Safe Net Cyberbullying Campaign',
+      subtitle: 'SafeNet Cyberbullying Awareness Campaign',
       description:
-        'An interactive short film about cyberbullying with AI-generated scenes, branching storylines, and two alternative endings designed to raise awareness through creative storytelling.',
+        'An interactive cyberbullying awareness platform featuring an AI-generated short film, branching storylines, educational content, quizzes, reporting resources, a gallery, and a virtual room.',
       contribution:
-        'AI scene generation, prompt engineering, video production, editing, and narrative development.',
+        'AI scene generation, prompt engineering, video production, editing, story development, and integration of the interactive film into the SafeNet web platform.',
       technologies: [
         'Gemini AI',
         'Prompt Engineering',
         'Video Editing',
         'Interactive Storytelling',
+        'Web Platform Integration',
       ],
       notes: [],
       images: [
-        { src: '/images/projects/amelia-film.png', alt: 'Amelia Short Film — Scene Overview' },
+        {
+          src: '/images/projects/amelia-dashboard.png',
+          alt: 'SafeNet Cyberbullying Awareness Platform Dashboard',
+        },
+        {
+          src: '/images/projects/amelia-film.png',
+          alt: 'Amelia Interactive AI Short Film Scene',
+        },
       ],
-      github:   'https://github.com/fransius-toni',  // TODO: update to repo URL
-      demo:     '',
-      featured: true,
+      // Source code is maintained by the project team.
+      github:      '',
+      demo:        'https://safenet-multimedia.netlify.app/',
+      featured:    true,
+      teamProject: true,
     },
   ],
 

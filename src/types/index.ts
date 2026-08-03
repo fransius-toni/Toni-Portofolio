@@ -28,11 +28,13 @@ export interface Project {
   /** Honest project notes / known limitations */
   notes: string[];
   images: ProjectImage[];
-  /** GitHub repository URL */
+  /** GitHub repository URL — omit or leave empty to hide the GitHub button */
   github?: string;
-  /** Live demo URL */
+  /** Live demo URL — omit or leave empty to hide the Live Demo button */
   demo?: string;
   featured?: boolean;
+  /** Set to true to display a "Team Project" badge on the card */
+  teamProject?: boolean;
 }
 
 export interface Experience {
