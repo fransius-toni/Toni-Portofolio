@@ -32,7 +32,7 @@ const portfolioData: PortfolioData = {
     whatsapp: 'https://wa.me/628128354234',
     whatsappDisplay: '0812-8354-234',
     cvUrl:    '/cv.pdf',
-    avatar:   '', // Set to '/images/profile.jpg' after adding your photo
+    avatar:   '/images/profile.jpeg',
   },
 
   // ── About ──────────────────────────────────────────────────────────────────
