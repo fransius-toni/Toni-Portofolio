@@ -38,13 +38,13 @@ const portfolioData: PortfolioData = {
   // ── About ──────────────────────────────────────────────────────────────────
   about: {
     paragraphs: [
-      'I am a sixth-semester Computer Science student at President University with a strong interest in Data Science, Machine Learning, Data Analytics, and AI chatbot development.',
+      'I am a seventh-semester Computer Science student at President University with a strong interest in Data Science, Machine Learning, Data Analytics, and AI chatbot development.',
       'I have experience building end-to-end applications using Python, SQL, machine learning, Streamlit, PostgreSQL, and LLM integration.',
       'My main project is EcoRoute AI — an intelligent waste management decision support system that combines waste-volume prediction, fleet requirement calculation, route optimization, and an AI assistant.',
     ],
     stats: [
       { label: 'GPA',                 value: '3.59' },
-      { label: 'Semester',            value: '6th' },
+      { label: 'Semester',            value: '7th' },
       { label: 'Main Projects',       value: '3' },
       { label: 'Expected Graduation', value: '2027' },
     ],
@@ -169,7 +169,7 @@ const portfolioData: PortfolioData = {
         { src: '/images/projects/ecoroute-armada.png',    alt: 'EcoRoute AI — Fleet Management' },
         { src: '/images/projects/ecoroute-routing.png',   alt: 'EcoRoute AI — Route Optimization' },
       ],
-      github:   'https://github.com/fransius-toni',  // TODO: update to repo URL
+      github:   'https://github.com/fransius-toni/WASTE-MANAGEMENT-2',  // TODO: update to repo URL
       demo:     '',
       featured: true,
     },
@@ -251,7 +251,7 @@ const portfolioData: PortfolioData = {
       type:        'work',
     },
     {
-      id:          'pucatso-pm',
+      id:          'Pucatso-RetRet',
       role:        'Project Manager',
       org:         'Pucatso RetRet Event — President University',
       period:      'February 2026 – July 2026',
@@ -275,7 +275,7 @@ const portfolioData: PortfolioData = {
     field:          'Computer Science',
     location:       'Cikarang, Bekasi',
     gpa:            '3.59 / 4.00',
-    semester:       '6th Semester',
+    semester:       '7th Semester',
     // Use plain year — components handle "Expected" label separately
     graduationYear: '2027',
     logo:           '', // Set to '/images/president-university-logo.png' when available
