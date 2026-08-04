@@ -170,7 +170,7 @@ const portfolioData: PortfolioData = {
         { src: '/images/projects/ecoroute-routing.png',   alt: 'EcoRoute AI — Route Optimization' },
       ],
       github:   'https://github.com/fransius-toni/WASTE-MANAGEMENT-2',  // TODO: update to repo URL
-      demo:     '',
+      demo:     'https://eco-route-ai.streamlit.app/',
       featured: true,
     },
     {
