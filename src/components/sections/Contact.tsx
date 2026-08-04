@@ -59,7 +59,7 @@ function ContactForm() {
     const body = encodeURIComponent(
       `Hello Fransius,\n\nMy name is ${form.name} (${form.email}).\n\n${form.message}`
     );
-    window.open(`mailto:${personal.email}?subject=${subj}&body=${body}`, '_blank');
+    window.location.href = `mailto:${personal.email}?subject=${subj}&body=${body}`;
     setSent(true);
     setTimeout(() => { setSent(false); setForm(EMPTY); }, 6000);
   };

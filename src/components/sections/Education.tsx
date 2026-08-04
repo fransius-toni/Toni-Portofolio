@@ -72,7 +72,7 @@ export default function Education() {
                 <div className="grid grid-cols-3 gap-3 mt-6 pt-5 border-t border-navy-700/60">
                   {[
                     { label: 'GPA',      value: '3.59' },
-                    { label: 'Semester', value: '6th'  },
+                    { label: 'Semester', value: '7th'  },
                     { label: 'Grad.',    value: '2027' },
                   ].map(({ label, value }) => (
                     <div key={label} className="text-center">
