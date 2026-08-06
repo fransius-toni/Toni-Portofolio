@@ -14,7 +14,7 @@ import SectionHeader from '../ui/SectionHeader';
 import portfolioData from '../../data/portfolioData';
 
 // ─── Colour helpers ───────────────────────────────────────────────────────────
-// Bars with 2 projects get the brighter cyan accent; those with 1 get a softer sky.
+// Technologies used in two or more projects use a brighter cyan accent.
 const BAR_COLOR_HIGH = 'rgba(6,182,212,0.80)';   // accent-cyan at full 2-project weight
 const BAR_COLOR_MID  = 'rgba(14,165,233,0.65)';  // accent-sky for 1-project entries
 
@@ -64,6 +64,11 @@ function RoundedBar({ x = 0, y = 0, width = 0, height = 0, fill }: RoundedBarPro
 export default function ProjectInsights() {
   const raw = portfolioData.projectTechnologyUsage;
 
+  const featuredProjectCount = portfolioData.projects.filter(
+  (project) => 'featured' in project && project.featured === true
+).length;
+
+
   // Sort descending by projects count, stable sort preserves original order for ties
   const data = useMemo(
     () => [...raw].sort((a, b) => b.projects - a.projects),
@@ -96,7 +101,7 @@ export default function ProjectInsights() {
 
         {/* Screen-reader summary */}
         <p id="insights-desc" className="sr-only">
-          Horizontal bar chart showing how many of my {portfolioData.projects.length} featured projects
+          Horizontal bar chart showing how many of my {featuredProjectCount} featured projects
           use each technology. Values are project counts, not skill ratings or percentages.
         </p>
 
@@ -197,7 +202,7 @@ export default function ProjectInsights() {
                   style={{ background: BAR_COLOR_HIGH }}
                   aria-hidden="true"
                 />
-                <span className="text-xs text-text-muted">Used in 2 projects</span>
+                <span className="text-xs text-text-muted">Used in 2 or more projects</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span
@@ -208,7 +213,7 @@ export default function ProjectInsights() {
                 <span className="text-xs text-text-muted">Used in 1 project</span>
               </div>
               <p className="text-xs text-text-muted ml-auto">
-                Based on {portfolioData.projects.length} featured projects
+                Based on {featuredProjectCount} featured projects
               </p>
             </div>
           </div>

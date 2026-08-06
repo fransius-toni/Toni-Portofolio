@@ -122,16 +122,16 @@ const portfolioData: PortfolioData = {
   // Used by the Project Insights horizontal bar chart.
   // Values are factual counts — not skill ratings or proficiency percentages.
   projectTechnologyUsage: [
-    { technology: 'Python',                projects: 2 },
+    { technology: 'Python',                projects: 3 },
     { technology: 'Machine Learning',      projects: 2 },
     { technology: 'Streamlit',             projects: 2 },
     { technology: 'Groq API',              projects: 2 },
-    { technology: 'PostgreSQL',            projects: 1 },
+    { technology: 'PostgreSQL',            projects: 2 },
+    { technology: 'Dagster',               projects: 1 },
+    { technology: 'Docker',                projects: 1 },
     { technology: 'XGBoost',               projects: 1 },
     { technology: 'Random Forest',         projects: 1 },
     { technology: 'Gemini AI',             projects: 1 },
-    { technology: 'Prompt Engineering',    projects: 1 },
-    { technology: 'Interactive Storytelling', projects: 1 },
   ],
 
   // ── Projects ───────────────────────────────────────────────────────────────
@@ -294,12 +294,12 @@ const portfolioData: PortfolioData = {
       type:        'leadership',
     },
     {
-      id:          'cetakamu-ops',
-      role:        'Operations Manager',
-      org:         'PT Cetakamu',
-      period:      'September 2024 – May 2025',
-      description: 'Managed end-to-end printing operations including design, production, logistics coordination, quality control, and client satisfaction.',
-      type:        'work',
+      id:          'Papal Journey',
+      role:        'Usher',
+      org:         'KMK KAJ',
+      period:      'September 2024',
+      description: 'Served as an usher during the Papal Journey, assisting guests, providing directions, managing attendee flow, and helping maintain an orderly and welcoming event environment.',
+      type:        'volunteer',
     },
   ],
 
