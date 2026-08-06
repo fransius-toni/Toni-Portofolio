@@ -238,7 +238,42 @@ const portfolioData: PortfolioData = {
       featured:    true,
       teamProject: true,
     },
+    {
+      id:       'public-holidays-pipeline',
+      title:    'Public Holidays Data Pipeline',
+      subtitle: 'Dagster Data Engineering Capstone Project',
+      description:
+        'A containerized data pipeline that retrieves public holiday data, validates and transforms the records, and loads them into PostgreSQL using Dagster assets and Docker Compose.',
+      contribution:
+        'Developed the complete pipeline, including data extraction, Dagster assets, PostgreSQL integration, asset checks, Docker configuration, automated testing, and workspace integration.',
+      technologies: [
+        'Python',
+        'Dagster',
+        'PostgreSQL',
+        'Docker',
+        'Docker Compose',
+        'ETL',
+        'Pytest',
+        'Data Engineering',
+      ],
+      notes: [
+        'Successfully loaded 17 public holiday records into PostgreSQL.',
+        'Implemented raw_holidays and holidays_table assets with data lineage.',
+        'Added holidays_data_check and achieved 5 passing automated tests.',
+        'Integrated the pipeline into the Dagster workspace through gRPC port 4003.',
+      ],
+      images: [
+        {
+          src: '/images/projects/public-holidays-pipeline.jpeg',
+          alt: 'Dagster lineage showing raw holidays and holidays table assets',
+        },
+      ],
+      github:   'https://github.com/fransius-toni/dagster-workshop-multi/tree/feature/capstone-holidays',
+      demo:     '',
+      featured: true,
+    },
   ],
+
 
   // ── Experience ─────────────────────────────────────────────────────────────
   experiences: [
